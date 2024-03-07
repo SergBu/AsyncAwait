@@ -110,3 +110,13 @@ static async Task<int> ReadFile(string file)
     Console.WriteLine(" File reading is completed");
     return length;
 }
+
+//Consider a real-world business case, a WPF UI binding data to the data grid by fetching a large number of rows from a database.
+//While data is being fetched and bound to a grid, the rest of the UI should continue to be responsive. Any attempt at interaction with other UI controls must not be blocked and data loading and binding must continue in parallel..
+//Refer to "Figure 1-1 Synchronous Behavior" below.
+//async void LoadEmployee_Click(object sender, RoutedEventArgs e)
+//{
+//    // ...
+//    await viewer.LoadEmplployeeAsync();
+//    // ...
+//}
